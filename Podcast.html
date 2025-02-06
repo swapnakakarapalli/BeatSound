@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Podcast.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <title>Library</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/4f1bb0da8e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+</head>
+
+<body>
+    <!--position sticky top-->
+    <header class="bg-black text-light logo_search">
+        <div class="container-fluid py-2">
+            <div class="row">
+                <div class="col-4 col-md-2">
+                    <img class="w-100" src="assets/Logo-removebg.png" alt="">
+                </div>
+                <div class="d-none col-md-5 d-md-inline-block search-bar my-2">
+                    <input class="form-control bg-black" data-bs-theme="dark" type="search"
+                        placeholder="Search Artists, Songs, Albums">
+                </div>
+                <div class="col-7 col-md-4 my-2">
+                    <div class="container">
+                        <div class="row  d-flex flex-row justify-content-end">
+                            <div class=" col-6 d-none d-md-inline-block">
+                                <select class="form-control bg-black" data-bs-theme="dark" name="" id="">
+                                    <option hidden value="">Languages</option>
+                                    <option value="">English</option>
+                                    <option value="">Hindi</option>
+                                    <option value="">Telugu</option>
+                                    <option value="">Tamil</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6 col-md-5 py-2 ">
+                                            <i class="bi bi-bell"></i>
+                                        </div>
+                                        <div class="col-md-4 d-none d-md-inline-block py-2 ">
+                                            <p data-bs-target="#login" data-bs-toggle="modal">Login</p>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <i data-bs-target="#login" data-bs-toggle="modal"
+                                                class="bi bi-person-circle profile_icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 col-md-1 d-flex justify-content-end my-2">
+                    <a href="sideNav" data-bs-target="#hamburger-icon" data-bs-toggle="offcanvas">
+                        <i class="bi bi-list hamburger_icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-md-none search-bar">
+                    <input class="form-control" type="search" data-bs-theme="dark"
+                        placeholder="Search Artists, Songs, Albums">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--OffCanvas--->
+    <div class="offcanvas offcanvas-end bg-black" id="hamburger-icon">
+        <div class="offcanvas-header bg-black text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <i data-bs-target="#login" data-bs-toggle="modal" class="bi bi-person-circle profile_icon"></i>
+                    </div>
+                    <div class="col-8 py-2">
+                        <p data-bs-target="#login" data-bs-toggle="modal">Login / sign Up</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="border border-secondary">
+        <div class="d-md-none offcanvas-body px-5">
+            <a class="navtext" href="./index.html">
+                <h6 class="text-secondary pr-3"><i class="fa-solid fa-house-chimney px-3"></i>Home</h6>
+            </a>
+            <a class="navtext" href="./explore.html">
+                <h6 class="text-secondary pr-3"><i class="fa-regular fa-compass px-3"></i>Explore</h6>
+            </a>
+            <a class="navtext" href="./Library.html">
+                <h6 class="text-secondary pr-3"><i class="fa-solid fa-bookmark px-3"></i>Library</h6>
+            </a>
+            <a class="navtext" href="./Podcast.html">
+                <h6 class="text-secondary pr-3"><i class="fa-solid fa-record-vinyl px-3"></i>Podcast</h6>
+            </a>
+            <hr class="border border-secondary">
+            <h6 class="text-secondary"><i class="fa-solid fa-id-card-clip px-3"></i>Your Channel</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-music px-3"></i>Get Music Premium</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-id-card px-3"></i>Switch account</h6>
+            <hr class="border border-secondary">
+            <h6 class="text-secondary"><i class="fa-solid fa-cloud-arrow-up px-3"></i>Upload music</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-clock-rotate-left px-3"></i>History</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-gear px-3"></i>Settings</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-shield-halved px-3"></i>Terms & privacy policy</h6>
+            <h6 class="text-secondary"><i class="fa-regular fa-circle-question px-3"></i>Help</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-circle-info px-3"></i>send feedback</h6>
+        </div>
+        <div class="d-none d-md-inline-block offcanvas-body px-5">
+            <h6 class="text-secondary"><i class="fa-solid fa-id-card-clip px-3"></i>Your Channel</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-music px-3"></i>Get Music Premium</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-id-card px-3"></i>Switch account</h6>
+            <hr class="border border-secondary">
+            <h6 class="text-secondary"><i class="fa-solid fa-cloud-arrow-up px-3"></i>Upload music</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-clock-rotate-left px-3"></i>History</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-gear px-3"></i>Settings</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-shield-halved px-3"></i>Terms & privacy policy</h6>
+            <h6 class="text-secondary"><i class="fa-regular fa-circle-question px-3"></i>Help</h6>
+            <h6 class="text-secondary"><i class="fa-solid fa-circle-info px-3"></i>send feedback</h6>
+        </div>
+        <div class="offcanvas-footer">
+            <button type="submit" class="btn btn-danger  form-control">Sign out</button>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-black border border-secondary">
+                <div class="modal-header">
+                    <h4 class="modal-title text-white">Login/SignUp</h4>
+                    <button data-bs-dismiss="modal" class="btn-close text-bg-danger"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <input class="form-control bg-black mb-2" type="text" placeholder="Name">
+                        <input class="form-control bg-black mb-2" type="email" placeholder="Email">
+                        <p class="text-center text-white">Or</p>
+                        <input class="form-control bg-black mb-2" type="tel" placeholder="Mobile Number">
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button class="btn btn-danger w-50">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <div class="bg-black">
+        <nav class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-sm bg-black border-bottom border-body" data-bs-theme="dark">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-1">
+                                <a href="./index.html" class="nav-link">Home </a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a href="./explore.html" class="nav-link">Explore</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a href="./Library.html" class="nav-link">Library</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a href="./Podcast.html" class="nav-link">Podcast</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </div>
+
+    <!-- beat sound Top 10 -->
+    <section class="container-fluid bg-black px-5">
+        <h4 class="text-white p-3">BeatSound Top 10</h4>
+        <div class="row row-cols-1 row-cols-md-6 g-4">
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/podcast1.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">Sirf Ishk</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/podcast2.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">Cricbaazi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/podcast3.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">Woice with Warikoo</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/podcast4.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">Hum Dil De Chuke</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/podcast5.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">The Dr. Cuterus</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/podcast6.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">दास्तान खौफ की</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Before You Sleep -->
+    <section class="container-fluid bg-black px-5">
+        <h4 class="text-white p-3">Before You Sleep</h4>
+        <div class="row row-cols-1 row-cols-md-6 g-4">
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/sleep1.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">Ek Kissa Roz Ka</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/sleep2.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">ZARA KHAUFF SE SUN..</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/sleep3.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">Khayal</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/sleep4.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">Story Time with Soha..</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-black">
+                    <img src="assets/sleep5.webp" class="card-img-top" alt="...">
+                    <div class="play-button-overlay">
+                        <a href="#">
+                            <img src="assets/play.png" alt="Play">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="text-white">Unconventional Ghalib</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- South Podcast -->
+    <section class="container-fluid bg-black px-5">
+        <h4 class="text-white p-3">South Podcast</h4>
+        <div class="owl-carousel owl-theme">
+            <div class="card bg-black ">
+                <img src="assets/South Podcast1.webp" alt="...">
+                <p class="text-white text-center py-3">KadhaiPodcast's PonniyinSelvan</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/South Podcast2.webp" alt="...">
+                <p class="text-white text-center py-3">The Habit Coach Kan</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/South Podcast3.webp" alt="...">
+                <p class="text-white text-center py-3">Kaathuvaakula Oru Ta</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/South Podcast4.webp" alt="...">
+                <p class="text-white text-center py-3">FCS Roundtable</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/South Podcast5.webp" alt="...">
+                <p class="text-white text-center py-3">KadhaiPodcast's Siva</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/South Podcast6.webp" alt="...">
+                <p class="text-white text-center py-3">Story Time Tamil</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Artists7.webp" alt="...">
+                <p class="text-white text-center py-3">Lucky Ali</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Artists8.webp" alt="...">
+                <p class="text-white text-center py-3">Zaeden</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Artists9.webp" alt="...">
+                <p class="text-white text-center py-3">Raj Barman</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Artists10.webp" alt="...">
+                <p class="text-white text-center py-3">Lost Stories</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Artists11.webp" alt="...">
+                <p class="text-white text-center py-3">Reena Gilbert</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Artists12.webp" alt="...">
+                <p class="text-white text-center py-3">Harsha Prawin</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Religion & Spirituality -->
+    <section class="container-fluid bg-black px-5">
+        <h4 class="text-white p-3">Religion & Spirituality</h4>
+        <div class="owl-carousel owl-theme">
+            <div class="card bg-black ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXxlQ4mRrUU_FR2b0KyRAi9qnPVV698a9hOA&s" alt="...">
+                <p class="text-white text-center py-3">Ramayan Aaj ke Liye</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="https://covers.storytel.com/jpg-640/0402001058231.88891401-b8a7-4564-8d3b-907cf600a3ab?optimize=high" alt="...">
+                <p class="text-white text-center py-3">Gyanyog By Swami </p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="https://i.scdn.co/image/ab67616d0000b27391bfac049277d4eb658f5a8c" alt="...">
+                <p class="text-white text-center py-3">Shiva</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6c/f2/02/6cf20231-85df-ad5f-881c-245ab34c8358/198846338408.jpg/1200x1200bb.jpg" alt="...">
+                <p class="text-white text-center py-3">Ramleela</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="https://d2wxtuh5s9v3ty.cloudfront.net/4c7c61cf28c8680bba4b03bfbfe264712116cdbf_320.webp" alt="...">
+                <p class="text-white text-center py-3">Pauranik Kathayen</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Religion & Spirituality6.webp" alt="...">
+                <p class="text-white text-center py-3">चाणक्य नीति</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Religion & Spirituality7.webp" alt="...">
+                <p class="text-white text-center py-3">Art of Living with Gurude</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Religion & Spirituality8.webp" alt="...">
+                <p class="text-white text-center py-3">Sadhguru</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Religion & Spirituality9.webp" alt="...">
+                <p class="text-white text-center py-3">Shri Ganesha</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Religion & Spirituality10.webp" alt="...">
+                <p class="text-white text-center py-3">नरसंहार- दुर्गा स्तुति,नौ दि</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Religion & Spirituality11.webp" alt="...">
+                <p class="text-white text-center py-3">Mahabharat</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+            <div class="card bg-black ">
+                <img src="assets/Religion & Spirituality12.webp" alt="...">
+                <p class="text-white text-center py-3">हरिप्रिया</p>
+                <div class="card-img-overlay  artist">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="bg-black text-light px-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="p-3 border border-secondary rounded my-3">
+                    <h4>About BeatSound</h4>
+                    <p class="text-secondary">BeatSound is a complete package that allows you free online music
+                        streaming, set caller tunes,
+                        listen to podcasts, download MP3 music offline, and much more! Since music is essentially the
+                        only thing that can truly understand a person, we consistently offer our audience the ideal
+                        blend of MP3 Songs by their favourite artists and of versatile genres.</p>
+                    <h4>Play & Download FREE MP3 Songs in all languages</h4>
+                    <p class="text-secondary">One of the unique features of Wynk Music is that it offers users the
+                        ability to stream music in
+                        multiple regional languages, including Hindi, Punjabi, Bengali, Tamil, Telugu, and more. Also,
+                        users of the app can download MP3 songs for offline listening. This online music platform
+                        provides access to additional features such as offline listening, high-quality audio, and
+                        exclusive content.</p>
+                    <h4>BeatSound – One Stop Destination for Offline & Online Music!</h4>
+                    <p class="text-secondary">BeatSound offers users access to a vast library of music, including Indian
+                        and international
+                        tracks across various genres like Bollywood, Punjabi, pop, rock, and more. We have made online
+                        music streaming simple, fun, and all about you! So, what’s the wait for, discover and listen to
+                        millions of songs, playlists, podcasts & download MP3 songs on any device including mobile for
+                        free exclusively on BeatSound. Keep Wynking!</p>
+                </div>
+            </div>
+
+            <div class="row download rounded py-2">
+                <div class="col-2 col-md-1 ">
+                    <img class="w-100" src="assets/music logo r-bg.png" alt="">
+                </div>
+                <div class="col-4 col-md-7">
+                    <h5>Best way to Listen to Music!</h5>
+                    <p class="text-secondary">Don’t forget to install BeatSound Music on your mobile phones</p>
+                </div>
+                <div class="col-3 col-md-2 py-2">
+                    <a href=""><img class="w-100 border border-secondary rounded" src="assets/Appstore.png" alt=""></a>
+                </div>
+                <div class="col-3 col-md-2 py-2">
+                    <a href=""><img class="w-100 border border-secondary rounded" src="assets/playstore.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="row py-5 footer_all_list">
+                <div class="col-6 col-md-3 px-3">
+                    <h4>LATEST ALBUMS</h4>
+                    <p class="text-secondary">Radical Optimism | Mr. And Mrs. Mahi (Original Motion Picture Soundtrack)
+                        | Vikram Original
+                        Motion Picture Soundtrack | Thallumaala | Pushpa - The Rise | Ninna Sanihake | Praktan | Leo |
+                        Bhavartha Mauli | Yuva Sarkar | Mal mahu jiban mati | THE TORTURED POETS DEPARTMENT: THE
+                        ANTHOLOGY</p>
+                </div>
+                <div class="col-6 col-md-3 px-3">
+                    <h4>EXPLORE MUSIC GENRES</h4>
+                    <p class="text-secondary">Rock Songs | Patriotic songs | Sufi Music | Ghazals | Workout Music |
+                        Devotional Songs | Sad
+                        Songs | DJ Songs</p>
+                </div>
+                <div class="col-6 col-md-3 px-3">
+                    <h4>OLD SONGS</h4>
+                    <p class="text-secondary">Old Songs | Old Hindi Songs | Old English Songs | Old Punjabi Songs | Old
+                        Telugu Songs | Old
+                        Tamil Songs | Old Bengali Songs | Old Malayalam Songs | Old Kannada Songs</p>
+                </div>
+                <div class="col-6 col-md-3 px-3">
+                    <h4>TOP ARTISTS</h4>
+                    <p class="text-secondary">Guru Randhawa | Arijit Singh | Atif Aslam | Justin Bieber | Gulzar |
+                        Armaan Malik | Sidhu Moose
+                        Wala | Alan Walker | Udit Narayan | Sonu Nigam | Sid Sriram | Akhil | Darshan Raval | Shreya
+                        Ghoshal | Alka Yagnik</p>
+                </div>
+                <div class="col-6 col-md-3 px-3">
+                    <h4>REGIONAL PLAYLISTS</h4>
+                    <p class="text-secondary">New Bengali Songs | New Bhojpuri Songs | New English Songs | New Haryanvi
+                        Songs | New Hindi Songs
+                        | New Kannada Songs | New Marathi Songs | New Punjabi Songs | New Tamil Songs | New Telugu Songs
+                        | Latest Odia Songs | New Rajasthani Songs | New Gujarati Songs | New Assamese Songs</p>
+                </div>
+                <div class="col-6 col-md-3 px-3">
+                    <h4>LATEST SONGS</h4>
+                    <p class="text-secondary">Satyanaas (From "Chandu Champion") | Dekhha Tenu (From "Mr. And Mrs.
+                        Mahi") | Vada Humse Karo
+                        (From "Savi") | Agar Ho Tum (From "Mr. And Mrs. Mahi") | Taras | Humdum (From "Savi A Bloody
+                        Housewife") | Roki Na | Mood Kirkira (From "Raayan") | Jaago (From "Hindustani 2") | Tu Hain Toh
+                        (From "Mr. And Mrs. Mahi") | Har Dafa | Chal Chaliye | O Yaara | Roya Jab Tu (From "Mr. And Mrs.
+                        Mahi") | Jiya Laage Na</p>
+                </div>
+                <div class="col-6 col-md-3 px-3">
+                    <h4>TRENDING SONGS</h4>
+                    <p class="text-secondary">Sajni (From "Laapataa Ladies") | O Maahi (From "Dunki") | Dekhha Tenu
+                        (From "Mr. And Mrs. Mahi")
+                        | Jiya Laage Na | Sonchadi | Coke Studio Bharat | Shukr Hai | Soulmate | Fear Song (From "Devara
+                        Part 1") [Telugu] | Ve Kamleya (From "Rocky Aur Rani Kii Prem Kahaani") | Apna Bana Le | Pehle
+                        Bhi Main | Kurchi Madathapetti | Pushpa Pushpa (From "Pushpa 2 The Rule") [Telugu] | Dhadke Dil
+                        Yeh Deewana | Satranga (From "ANIMAL")</p>
+                </div>
+                <div class="col-6 col-md-3 px-3">
+                    <h4>SONGS WITH LYRICS</h4>
+                    <p class="text-secondary">Coca Cola | Bom Diggy Diggy | Machayenge | Tera Yaar Hoon Main | Kar Gayi
+                        Chull (From "Kapoor &
+                        Sons (Since 1921)") | Morni Banke | Chalti Hai Kya 9 Se 12 | Hawayein</p>
+                </div>
+                <div class="col-6 col-md-3 px-3">
+                    <h4>DEVOTIONAL SONGS</h4>
+                    <p class="text-secondary">Ganesh Ji Ki Aarti | Laxmi Ji Ki Aarti | Shri Hanuman Chalisa | Shiv
+                        Bhajan | Gurbani | Gurbani
+                        Shabad | Islamic Songs | Jesus Songs | Christian Songs</p>
+                </div>
+            </div>
+
+            <div class="row border-top border-bottom py-5 ">
+                <div class="col-md-9">
+                    <span class="px-2">ABOUT US</span>|
+                    <span class="px-2">PRIVACY POLICY</span>|
+                    <span class="px-2">TERMS OF USE</span>|
+                    <span class="px-2">CONTACT US</span>|
+                    <span class="px-2">HELLOTUNES</span>
+                    <!-- <h6>ABOUT US | PRIVACY POLICY | TERMS OF USE | CONTACT US | HELLOTUNES</h6> -->
+                </div>
+                <div class="col-md-3">
+                    <i class="bi bi-facebook px-3"></i>
+                    <i class="bi bi-twitter-x px-3"></i>
+                    <i class="bi bi-instagram px-3"></i>
+                    <i class="bi bi-youtube px-3"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!--position fixed bottom-->
+    <section class="play_songs w-100">
+        <div class="container-fluid bg-black text-light py-3">
+            <div class="row">
+                <div class="col-4 col-md-4 text-right ">
+                    <div class="controls">
+                        <div class="d-none d-md-flex"> <i class="fa-solid fa-backward"></i></div>
+                        <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                        <div class="d-none d-md-flex"><i class="fa-solid fa-forward"></i></div>
+                    </div>
+                </div>
+
+                <div class="col-5 col-md-4 play_music_icon text-center">
+                    <audio id="song">
+                        <source src="assets/Sooseki.mp3" type="audio/mpeg">
+                    </audio>
+                    <input class="d-none d-md-flex" type="range" value="0" id="progress">
+                </div>
+
+
+                <div class="col-3 col-md-4 play-poster d-flex flex-row justify-content-end">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02948900c44901e7ca0d1ef9c3" alt="">
+                    <span>Sooseki</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(() => {
+
+            // calling owl carousel
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: true,
+                autoplay: false,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 6
+                    }
+                }
+            });
+
+
+        });
+
+
+
+
+    </script>
+    <script>
+        // play music
+        let progress = document.getElementById('progress')
+        let song = document.getElementById('song')
+        let ctrlIcon = document.getElementById('ctrlIcon')
+
+        song.onloadedmetadata = function () {
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+
+        }
+
+        function playPause() {
+            if (ctrlIcon.classList.contains("fa-pause")) {
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+            }
+            else {
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+            }
+        }
+
+        if (song.play()) {
+            setInterval(() => {
+                progress.value = song.currentTime;
+            }, 500);
+        }
+
+        progress.onchange = function () {
+            song.play();
+            song.currentTime = progress.value;
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+        }
+
+
+    </script>
+</body>
+
+</html>
